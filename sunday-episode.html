@@ -7,12 +7,21 @@
 <style>
 :root{color-scheme:light;--ink:#2f2923;--muted:#74685c;--paper:#f7f3e3;--panel:#fffdf8;--line:#e7dccb;--accent:#8e4f35}
 *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#efe5d1,#f7f3e3 45%,#eadbc5);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}main{max-width:900px;margin:0 auto;padding:42px 16px 60px}article{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,54px);box-shadow:0 12px 35px rgba(78,53,31,.09)}.eyebrow{margin:0 0 8px;color:var(--accent);font:700 .78rem/1.2 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}h1{margin:.1em 0 .2em;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;font-weight:500}.meta{color:var(--muted);margin:0 0 30px;font:.9rem system-ui,sans-serif}.transcript{white-space:pre-wrap;font:1rem/1.7 Georgia,"Times New Roman",serif}.transcript strong{color:var(--accent)}footer{margin-top:24px;text-align:center;color:var(--muted);font:.78rem system-ui,sans-serif}
+
+.player{position:sticky;top:0;z-index:2;background:var(--panel);padding:14px 0 12px;border-bottom:1px solid var(--line);margin-bottom:20px;font:.9rem/1.5 system-ui,sans-serif}.player audio{display:block;width:100%;margin:8px 0}.player label{display:inline-flex;gap:8px;align-items:center}.playback-help{margin:6px 0 0;color:var(--muted);font-size:.8rem}.transcript .passage{display:block;border-radius:7px;padding:8px 12px;margin:0 -12px 10px;border-left:3px solid transparent;scroll-margin-top:180px}.passage.is-speaking{background:#ffe5a1;border-left-color:var(--accent)}.timestamp{border:0;background:transparent;color:var(--accent);font:inherit;font-weight:700;padding:0;text-align:left;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.timestamp:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media print{.player{display:none}.passage.is-speaking{background:transparent;border-color:transparent}}
 </style>
 </head>
 <body><main><article>
 <p class="eyebrow">BBC Radio 4 · The Archers</p>
 <h1>Sunday’s episode</h1>
 <p class="meta">Transcript with timestamps · includes programme advertisements</p>
+<section class="player" aria-label="Sunday episode audio">
+<strong>Listen to Sunday’s episode</strong>
+<audio id="episode-audio" controls preload="metadata" src="s93290-US-939s-1789929085.mp3">Your browser does not support audio playback. <a href="s93290-US-939s-1789929085.mp3">Download the MP3</a>.</audio>
+<label><input id="follow-audio" type="checkbox" checked> Follow the transcript</label>
+<p class="playback-help">Select a timestamp to play from there. Highlighting follows transcript timestamps; passages with the same timestamp highlight together.</p>
+<p id="audio-error" role="alert" hidden>Unable to load the recording. Keep the MP3 in the same folder as this page.</p>
+</section>
 <div class="transcript"><strong>0 (0s)</strong>
 This BBC podcast is supported by ads outside the UK.
 
@@ -444,4 +453,86 @@ Whether it's a crisp fall morning or a full-blown thunderstorm, whether you're k
 
 <strong>Mervis Diamond Importers (14m 32s)</strong>
 Every man remembers that moment. Your heart pounds, your hands shake just a little, and suddenly the world goes quiet as you look into her eyes and ask the question that changes your life forever. When she says yes, there's no feeling like it. Discover the diamond ring that makes it unforgettable at Mervis Diamond Importers. Visit mervisdiamond.com or call 800-HER-LOVE.</div>
-</article><footer>Static archive for The Archers transcripts.</footer></main></body></html>
+</article><footer>Static archive for The Archers transcripts.</footer></main><script>
+(() => {
+  const audio = document.getElementById('episode-audio');
+  const transcript = document.querySelector('.transcript');
+  const follow = document.getElementById('follow-audio');
+  const groups = [];
+  let group;
+  // Keep equal timestamps together: the source provides no finer timing.
+  for (const node of [...transcript.childNodes]) {
+    if (node.nodeType === Node.ELEMENT_NODE && node.matches('strong')) {
+      const match = node.textContent.match(/\((?:(\d+)m\s*)?(\d+)s\)/);
+      if (!match) continue;
+      const start = Number(match[1] || 0) * 60 + Number(match[2]);
+      if (!group || group.start !== start) {
+        const element = document.createElement('div');
+        element.className = 'passage';
+        element.dataset.start = start;
+        transcript.insertBefore(element, node);
+        group = {start, element};
+        groups.push(group);
+      }
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'timestamp';
+      button.textContent = node.textContent;
+      button.setAttribute('aria-label', `Play from ${Math.floor(start / 60)} minutes ${start % 60} seconds, ${node.textContent}`);
+      button.addEventListener('click', () => {
+        audio.currentTime = start;
+        paint();
+        audio.play().catch(() => {});
+      });
+      group.element.append(button);
+      node.remove();
+    } else if (group) {
+      group.element.append(node);
+    }
+  }
+  let active = null;
+  let frame = null;
+  function scrollToActive() {
+    if (!follow.checked || !active) return;
+    const rect = active.element.getBoundingClientRect();
+    const playerBottom = document.querySelector('.player').getBoundingClientRect().bottom;
+    if (rect.top < playerBottom || rect.top > window.innerHeight - 100) {
+      active.element.scrollIntoView({block: 'start', behavior: 'instant'});
+    }
+  }
+  function paint() {
+    const time = audio.currentTime;
+    const next = audio.ended ? null : groups.find((item, index) =>
+      time >= item.start && (index === groups.length - 1 || time < groups[index + 1].start));
+    if (next === active) return;
+    if (active) {
+      active.element.classList.remove('is-speaking');
+      active.element.removeAttribute('aria-current');
+    }
+    active = next || null;
+    if (active) {
+      active.element.classList.add('is-speaking');
+      active.element.setAttribute('aria-current', 'true');
+      if (!audio.paused) scrollToActive();
+    }
+  }
+  function tick() {
+    paint();
+    frame = audio.paused || audio.ended ? null : requestAnimationFrame(tick);
+  }
+  audio.addEventListener('play', () => {
+    if (frame !== null) cancelAnimationFrame(frame);
+    tick();
+    scrollToActive();
+  });
+  audio.addEventListener('pause', () => {
+    if (frame !== null) cancelAnimationFrame(frame);
+    frame = null;
+    paint();
+  });
+  for (const event of ['timeupdate', 'seeking', 'seeked', 'ended']) audio.addEventListener(event, paint);
+  audio.addEventListener('error', () => { document.getElementById('audio-error').hidden = false; });
+  follow.addEventListener('change', scrollToActive);
+})();
+</script>
+</body></html>
