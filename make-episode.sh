@@ -274,8 +274,6 @@ def main():
                             '<p id="audio-error" role="alert" hidden>Unable to load the recording. Check that the audio file is still at its original location.</p>')
         page = replace_once(page, r'<div class="transcript">.*?</div>\s*</article>',
                             f'<div class="transcript">{transcript_html}</div>\n</article>')
-        page = replace_once(page, r'const start = Number\(match\[1\] \|\| 0\) \* 60 \+ Number\(match\[2\]\);',
-                            'const start = Number(node.dataset.start);')
     except (OSError, UnicodeError, ValueError) as exc:
         parser.error(str(exc))
 
