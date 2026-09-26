@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Archers — Thursday Transcript</title>
+<style>
+:root{color-scheme:light;--ink:#2f2923;--muted:#74685c;--paper:#f7f3e3;--panel:#fffdf8;--line:#e7dccb;--accent:#8e4f35}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#efe5d1,#f7f3e3 45%,#eadbc5);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}main{max-width:900px;margin:0 auto;padding:42px 16px 60px}article{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,5vw,54px);box-shadow:0 12px 35px rgba(78,53,31,.09)}.eyebrow{margin:0 0 8px;color:var(--accent);font:700 .78rem/1.2 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}h1{margin:.1em 0 .2em;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;font-weight:500}.meta{color:var(--muted);margin:0 0 30px;font:.9rem system-ui,sans-serif}.transcript{white-space:pre-wrap;font:1rem/1.7 Georgia,"Times New Roman",serif}.transcript strong{color:var(--accent)}footer{margin-top:24px;text-align:center;color:var(--muted);font:.78rem system-ui,sans-serif}
+
+.player{max-width:900px;margin:0 auto;padding:14px 16px;font:.9rem/1.5 system-ui,sans-serif}.player audio{display:block;width:100%;margin:0}.player label{display:inline-flex;gap:8px;align-items:center}.player-dock{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--panel);border-top:1px solid var(--line);box-shadow:0 -10px 30px rgba(78,53,31,.14)}.menu{position:fixed;top:18px;right:22px;z-index:12;font:.9rem/1.5 system-ui,sans-serif}.menu-button{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--accent);cursor:pointer;box-shadow:0 6px 18px rgba(78,53,31,.16)}.menu-button svg{width:20px;height:20px;fill:currentColor}.menu-button:hover{background:#fff}.menu-button:focus-visible,.menu-panel label:focus-within{outline:2px solid var(--accent);outline-offset:3px}.menu-panel{position:absolute;top:52px;right:0;min-width:210px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:0 14px 34px rgba(78,53,31,.2)}.menu-panel label{display:flex;gap:9px;align-items:center;cursor:pointer;white-space:nowrap}@media (max-width:560px){.menu{top:12px;right:14px}}#mini-toggle{display:none}body.mini-player .player-dock{left:auto;right:22px;bottom:22px;background:transparent;border:0;box-shadow:none}body.mini-player .player{width:auto;max-width:none;padding:0;margin:0}body.mini-player .player audio,body.mini-player .player label,body.mini-player .player #audio-error{display:none}body.mini-player #mini-toggle{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--accent);cursor:pointer;box-shadow:0 8px 24px rgba(78,53,31,.28);transition:transform .15s ease,box-shadow .15s ease}#mini-toggle:hover{transform:scale(1.06)}#mini-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px}#mini-toggle svg{width:22px;height:22px;fill:currentColor}@media (max-width:560px){body.mini-player .player-dock{right:14px;bottom:14px}}.transcript .passage{display:block;border-radius:7px;padding:8px 12px;margin:0 -12px 10px;border-left:3px solid transparent;scroll-margin-top:24px}.passage.is-speaking{background:#ffe5a1;border-left-color:var(--accent)}.timestamp{border:0;background:transparent;color:var(--accent);font:inherit;font-weight:700;padding:0;text-align:left;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.timestamp:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media print{.player-dock,#mini-toggle,.menu{display:none}.passage.is-speaking{background:transparent;border-color:transparent}}
+</style>
+</head>
+<body>
+<div class="menu" id="menu">
+<button class="menu-button" id="menu-toggle" type="button" aria-label="Playback settings" aria-expanded="false" aria-controls="menu-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="2.2" rx="1.1"></rect><rect x="3.5" y="10.9" width="17" height="2.2" rx="1.1"></rect><rect x="3.5" y="16.3" width="17" height="2.2" rx="1.1"></rect></svg></button>
+<div class="menu-panel" id="menu-panel" hidden>
+<label><input id="follow-audio" type="checkbox" checked> Follow the transcript</label>
+</div>
+</div>
+<main><article>
+<p class="eyebrow">BBC Radio 4 · The Archers</p>
+<h1>Thursday’s episode</h1>
+<p class="meta">Transcript with timestamps</p>
+<div class="player-dock" id="player-dock"><section class="player" id="player" aria-label="Thursday’s episode audio">
+<audio id="episode-audio" controls preload="metadata" src="s93290-GB-812s-1790317046.mp3">Your browser does not support audio playback. <a href="s93290-GB-812s-1790317046.mp3">Download the audio</a>.</audio>
+<p id="audio-error" role="alert" hidden>Unable to load the recording. Check that the audio file is still at its original location.</p>
+<button id="mini-toggle" type="button" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="4.5" width="4" height="15" rx="1.2"></rect><rect x="13.5" y="4.5" width="4" height="15" rx="1.2"></rect></svg></button>
+</section></div>
+<div class="transcript"><strong data-start="1.630">Caption (0m 1s)</strong>
+BBC Sounds. Music, radio, podcasts. As the nights draw in
+
+<strong data-start="8.751">Caption (0m 8s)</strong>
+and you settle down with a BBC podcast. They smiled,
+
+<strong data-start="12.133">Caption (0m 12s)</strong>
+ate her cookies. Discover the darker side of life. And
+
+<strong data-start="15.415">Caption (0m 15s)</strong>
+all the while they were plotting mass murder. Join the
+
+<strong data-start="18.617">Caption (0m 18s)</strong>
+true crime investigations on BBC Sounds. He was there to
+
+<strong data-start="22.479">Caption (0m 22s)</strong>
+lay it all out on the table. With credible, cutting-edge
+
+<strong data-start="25.001">Caption (0m 25s)</strong>
+journalism. From mysterious deaths to legal and corporate scandals. It&#x27;s
+
+<strong data-start="28.983">Caption (0m 28s)</strong>
+world-class storytelling with real-world stakes. Their web had reached every
+
+<strong data-start="33.586">Caption (0m 33s)</strong>
+corner of Britain. Search true crime. On BBC Sounds.
+
+<strong data-start="38.141">Caption (0m 38s)</strong>
+You&#x27;re listening to Thursday&#x27;s episode of The Archers from BBC
+
+<strong data-start="42.604">Caption (0m 42s)</strong>
+Radio 4. So, this morning we&#x27;ll start a batch of
+
+<strong data-start="49.208">Caption (0m 49s)</strong>
+sterling gold. More for the Christmas rush. Yep. I really
+
+<strong data-start="55.572">Caption (0m 55s)</strong>
+want to make the most of it. Especially now we&#x27;ve
+
+<strong data-start="67.776">Caption (1m 7s)</strong>
+got all that lovely extra milk. Oh, exactly, Tracy. How&#x27;s
+
+<strong data-start="71.258">Caption (1m 11s)</strong>
+Slavko getting on? Milking 40 cows, not 30. Oh, he&#x27;s
+
+<strong data-start="74.660">Caption (1m 14s)</strong>
+well in the groove now. Liking the extra money, of
+
+<strong data-start="77.122">Caption (1m 17s)</strong>
+course.
+
+<strong data-start="78.280">Caption (1m 18s)</strong>
+I&#x27;m pleased things are going so well, Helen. Yeah, they
+
+<strong data-start="81.082">Caption (1m 21s)</strong>
+are. In fact, to celebrate, I&#x27;m planning a little half-term
+
+<strong data-start="84.324">Caption (1m 24s)</strong>
+treat for Jack and Henry. Oh, yeah? The new theme
+
+<strong data-start="87.405">Caption (1m 27s)</strong>
+park, the other side of Westbury. Oh, they&#x27;ll love that.
+
+<strong data-start="90.808">Caption (1m 30s)</strong>
+Yeah, I think so. As long as I don&#x27;t mind
+
+<strong data-start="94.830">Caption (1m 34s)</strong>
+queuing, half-term and all. Well, I&#x27;ve thought of that. I&#x27;m
+
+<strong data-start="95.951">Caption (1m 35s)</strong>
+going to treat us all to fast-track passes. Oh, right.
+
+<strong data-start="98.713">Caption (1m 38s)</strong>
+Yeah, it more or less triples the cost, but if
+
+<strong data-start="101.934">Caption (1m 41s)</strong>
+it means the boys get maximum enjoyment. Yeah, good for
+
+<strong data-start="105.456">Caption (1m 45s)</strong>
+them. Indicator. Your indicator&#x27;s still on. Oh, right. There&#x27;s such
+
+<strong data-start="114.782">Caption (1m 54s)</strong>
+a lot to think about in there. It will come,
+
+<strong data-start="117.124">Caption (1m 57s)</strong>
+Brad.
+
+<strong data-start="119.065">Caption (1m 59s)</strong>
+But I think that&#x27;s enough for now. Yeah. I&#x27;ve got
+
+<strong data-start="121.726">Caption (2m 1s)</strong>
+a seminar this afternoon I&#x27;ve got to get ready for,
+
+<strong data-start="123.588">Caption (2m 3s)</strong>
+and you&#x27;ve got to get to work, don&#x27;t you? Aye,
+
+<strong data-start="125.929">Caption (2m 5s)</strong>
+I do. You don&#x27;t sound too happy about it, does
+
+<strong data-start="128.491">Caption (2m 8s)</strong>
+it? Well, none of you&#x27;s too happy at Beryl Farm
+
+<strong data-start="130.953">Caption (2m 10s)</strong>
+than you. Really? It&#x27;s not a good time to be
+
+<strong data-start="133.774">Caption (2m 13s)</strong>
+in pigs. Why&#x27;s that? The big processes are all cutting
+
+<strong data-start="137.557">Caption (2m 17s)</strong>
+their orders. If we&#x27;re no careful, we&#x27;ll end up with
+
+<strong data-start="140.118">Caption (2m 20s)</strong>
+finished animals and they&#x27;ve got to take them. So what
+
+<strong data-start="142.200">Caption (2m 22s)</strong>
+will you do then? Try and find somebody that will.
+
+<strong data-start="144.942">Caption (2m 24s)</strong>
+It&#x27;ll be a rubbish price, but turn left at the
+
+<strong data-start="148.204">Caption (2m 28s)</strong>
+junction. Right. I mean, left. Yeah. Indicator. Hannah reckons we&#x27;re
+
+<strong data-start="154.668">Caption (2m 34s)</strong>
+on the point of losing money on every pick. No,
+
+<strong data-start="158.345">Caption (2m 38s)</strong>
+it&#x27;s a fast. Break.
+
+<strong data-start="159.106">Caption (2m 39s)</strong>
+Gently. Sorry. The worst comes to the worst, we might
+
+<strong data-start="163.028">Caption (2m 43s)</strong>
+end up slaughtering them ourselves. Got nothing for them at
+
+<strong data-start="166.730">Caption (2m 46s)</strong>
+all. That&#x27;s awful. So why is it all so bad?
+
+<strong data-start="172.154">Caption (2m 52s)</strong>
+Lots of things, but... Then you get some war thousands
+
+<strong data-start="175.151">Caption (2m 55s)</strong>
+of miles away and everybody&#x27;s costs go up. Still, at
+
+<strong data-start="179.494">Caption (2m 59s)</strong>
+least we&#x27;ve had some good news for Tunisia. Tunisia? That&#x27;s
+
+<strong data-start="182.856">Caption (3m 2s)</strong>
+where Jim Lloyd is just now. Happy as Larry. Poking
+
+<strong data-start="186.518">Caption (3m 6s)</strong>
+round the ruins of ancient Carthage. Yeah? He says we&#x27;re
+
+<strong data-start="193.541">Caption (3m 13s)</strong>
+fine to sell the Riley. That&#x27;s good, anyway. A truck!
+
+<strong data-start="199.985">Caption (3m 19s)</strong>
+Oh, hello, Robert. Good morning. Lovely day. Isn&#x27;t it? Out
+
+<strong data-start="204.267">Caption (3m 24s)</strong>
+for a walk? Yes, my morning constitutional. Still feels very
+
+<strong data-start="209.130">Caption (3m 29s)</strong>
+strange without Monty. I bet. But I know it does
+
+<strong data-start="212.731">Caption (3m 32s)</strong>
+me good, so I&#x27;m keen to keep it up. You
+
+<strong data-start="214.612">Caption (3m 34s)</strong>
+too? Sorry? Morning constitutional. Oh, yes, sort of. I woke
+
+<strong data-start="220.496">Caption (3m 40s)</strong>
+up early with an overwhelming desire to get out of
+
+<strong data-start="222.657">Caption (3m 42s)</strong>
+the house. Miss Linda and I are very much looking
+
+<strong data-start="225.319">Caption (3m 45s)</strong>
+forward to this foraging walk. Oh, good. She&#x27;ve booked, have
+
+<strong data-start="228.401">Caption (3m 48s)</strong>
+you? Yeah, we have. Sounds like just our sort of
+
+<strong data-start="230.882">Caption (3m 50s)</strong>
+thing. It&#x27;s looking like it should be pretty popular. An
+
+<strong data-start="233.363">Caption (3m 53s)</strong>
+excellent initiative. Thank you. Kirsty, do you have a moment?
+
+<strong data-start="238.960">Caption (3m 58s)</strong>
+All the time in the world.
+
+<strong data-start="239.961">Caption (3m 59s)</strong>
+Because Lindy and I have been discussing another project which
+
+<strong data-start="244.203">Caption (4m 4s)</strong>
+might be of interest to you. Oh, go on. We&#x27;re
+
+<strong data-start="247.385">Caption (4m 7s)</strong>
+thinking of setting up a field specifically so people can
+
+<strong data-start="250.787">Caption (4m 10s)</strong>
+exercise their dogs securely and away from children and livestock.
+
+<strong data-start="255.610">Caption (4m 15s)</strong>
+Oh, yeah, I&#x27;ve heard of them. Commercially, you mean? Yes,
+
+<strong data-start="258.271">Caption (4m 18s)</strong>
+as a small business. Well, there&#x27;s obviously a market for
+
+<strong data-start="261.373">Caption (4m 21s)</strong>
+that sort of thing. I&#x27;m not sure where I&#x27;d fit
+
+<strong data-start="263.675">Caption (4m 23s)</strong>
+in, though. Well, I was wondering if it&#x27;s something rewilding
+
+<strong data-start="267.622">Caption (4m 27s)</strong>
+would consider hosting. Oh, no, no, that wouldn&#x27;t work for
+
+<strong data-start="272.105">Caption (4m 32s)</strong>
+us at all. Wouldn&#x27;t it? Well, you really need a
+
+<strong data-start="274.446">Caption (4m 34s)</strong>
+field of plain grass for the dogs to run around
+
+<strong data-start="276.647">Caption (4m 36s)</strong>
+in, don&#x27;t you? Oh, yes. That sort of monoculture is
+
+<strong data-start="280.249">Caption (4m 40s)</strong>
+the antithesis of rewilding.
+
+<strong data-start="281.850">Caption (4m 41s)</strong>
+Oh, yes, of course, of course. Ignore me. I&#x27;m just
+
+<strong data-start="285.512">Caption (4m 45s)</strong>
+so keen to find a way of making it work
+
+<strong data-start="287.594">Caption (4m 47s)</strong>
+for Linda and, well, other reasons. Oh, sorry. No, no,
+
+<strong data-start="291.951">Caption (4m 51s)</strong>
+no, no. But just because it&#x27;s not right for us,
+
+<strong data-start="295.313">Caption (4m 55s)</strong>
+you know how hard it is for farmers at the
+
+<strong data-start="296.974">Caption (4m 56s)</strong>
+moment. There must be someone locally who&#x27;d be happy to
+
+<strong data-start="299.835">Caption (4m 59s)</strong>
+rent you a few acres of less productive land. Well,
+
+<strong data-start="302.097">Caption (5m 2s)</strong>
+that&#x27;s what we thought. We did approach Meadow Farm, but
+
+<strong data-start="305.079">Caption (5m 5s)</strong>
+Esme didn&#x27;t think it was for her. There you are!
+
+<strong data-start="308.801">Caption (5m 8s)</strong>
+Me? I... I woke up and you were nowhere in
+
+<strong data-start="311.341">Caption (5m 11s)</strong>
+the house, Kirsty. I&#x27;ve been so worried. Don&#x27;t say you&#x27;ve
+
+<strong data-start="314.023">Caption (5m 14s)</strong>
+been searching the village for me. No, not searching. I&#x27;m
+
+<strong data-start="316.924">Caption (5m 16s)</strong>
+not a lost child. I was just on my way
+
+<strong data-start="318.925">Caption (5m 18s)</strong>
+to work and happened to see you talking to Robert.
+
+<strong data-start="320.807">Caption (5m 20s)</strong>
+Good morning, Robert. Good morning.
+
+<strong data-start="322.207">Caption (5m 22s)</strong>
+But I&#x27;m sorry, I couldn&#x27;t help hearing what you were
+
+<strong data-start="324.349">Caption (5m 24s)</strong>
+saying. Kate! And it sounds very work-related. So? So whether
+
+<strong data-start="328.151">Caption (5m 28s)</strong>
+or not you should be out and about, you&#x27;re off
+
+<strong data-start="330.212">Caption (5m 30s)</strong>
+sick, which means Robert shouldn&#x27;t be discussing business with you.
+
+<strong data-start="333.394">Caption (5m 33s)</strong>
+You&#x27;re off sick? Well... Technically, yes. Not technically at all.
+
+<strong data-start="337.752">Caption (5m 37s)</strong>
+Oh, Kirsty, I&#x27;m so sorry. I had no idea. Really,
+
+<strong data-start="339.893">Caption (5m 39s)</strong>
+Robert, it&#x27;s fine. No, I will leave you in peace
+
+<strong data-start="343.035">Caption (5m 43s)</strong>
+immediately. Oh, careful. Mind that car. Is that Brad Horrobin
+
+<strong data-start="347.617">Caption (5m 47s)</strong>
+driving? Sorry, Robert. My fault. He just stepped out in
+
+<strong data-start="353.747">Caption (5m 53s)</strong>
+front of me. You were going a bit fast, Brad.
+
+<strong data-start="356.809">Caption (5m 56s)</strong>
+I&#x27;d call it six and two threes. You&#x27;ve got to
+
+<strong data-start="359.490">Caption (5m 59s)</strong>
+learn to anticipate. People are going to do stupid things
+
+<strong data-start="362.512">Caption (6m 2s)</strong>
+sometimes.
+
+<strong data-start="362.992">Caption (6m 2s)</strong>
+Well, I wish they wouldn&#x27;t when I&#x27;m learning. Nay, harm
+
+<strong data-start="365.554">Caption (6m 5s)</strong>
+done. Except you&#x27;re mad nerves. Right. Turn into the road
+
+<strong data-start="370.112">Caption (6m 10s)</strong>
+and park as close to the house as you can.
+
+<strong data-start="372.473">Caption (6m 12s)</strong>
+OK. Clutch! Sorry. And you&#x27;re still in third. Uh, yeah.
+
+<strong data-start="377.476">Caption (6m 17s)</strong>
+Gently new. You&#x27;ve got to stop this fussing, Kate. I&#x27;m
+
+<strong data-start="380.478">Caption (6m 20s)</strong>
+only looking out for you. I thought I made it
+
+<strong data-start="391.019">Caption (6m 31s)</strong>
+clear yesterday. A little bit of research here or a
+
+<strong data-start="393.781">Caption (6m 33s)</strong>
+conversation there isn&#x27;t going to tip me over the edge.
+
+<strong data-start="396.362">Caption (6m 36s)</strong>
+Quite the opposite. I understand you&#x27;re finding it frustrating. This
+
+<strong data-start="399.824">Caption (6m 39s)</strong>
+is frustrating. I had to tell Rex to wind his
+
+<strong data-start="402.601">Caption (6m 42s)</strong>
+neck in, but you&#x27;re twice as bad, giving me a
+
+<strong data-start="404.862">Caption (6m 44s)</strong>
+hard time in the middle of the village.
+
+<strong data-start="406.363">Caption (6m 46s)</strong>
+Please, Kirsty, calm down. This isn&#x27;t what I wanted at
+
+<strong data-start="408.905">Caption (6m 48s)</strong>
+all. No-one is more determined than me that this baby
+
+<strong data-start="411.586">Caption (6m 51s)</strong>
+will be born healthy. I was just so sick of
+
+<strong data-start="414.208">Caption (6m 54s)</strong>
+being cooped up at home, and I&#x27;m hardly running a
+
+<strong data-start="416.849">Caption (6m 56s)</strong>
+marathon, am I? Well, no. Surely you can see. A
+
+<strong data-start="420.732">Caption (7m 0s)</strong>
+bit of fresh air and gentle exercise has got to
+
+<strong data-start="422.973">Caption (7m 2s)</strong>
+be a good thing. Yes, of course. I&#x27;m sorry. I
+
+<strong data-start="428.551">Caption (7m 8s)</strong>
+know I overreact sometimes. Phoebe said the same when she
+
+<strong data-start="431.673">Caption (7m 11s)</strong>
+was pregnant. But I can&#x27;t help it. I care about
+
+<strong data-start="435.575">Caption (7m 15s)</strong>
+you, Kirsty. I know. And this baby is going to
+
+<strong data-start="440.158">Caption (7m 20s)</strong>
+be Jacob&#x27;s little niece or nephew. And I know we&#x27;re
+
+<strong data-start="443.660">Caption (7m 23s)</strong>
+not married, but I really feel like it&#x27;s going to
+
+<strong data-start="446.322">Caption (7m 26s)</strong>
+be mine too.
+
+<strong data-start="448.123">Caption (7m 28s)</strong>
+But I promise I will do my best to stop
+
+<strong data-start="450.544">Caption (7m 30s)</strong>
+interfering. There&#x27;s probably a happy medium. And I will try
+
+<strong data-start="455.187">Caption (7m 35s)</strong>
+to find it. It&#x27;s lovely you feel that way. Thank
+
+<strong data-start="459.201">Caption (7m 39s)</strong>
+you. I couldn&#x27;t think of a better auntie for my
+
+<strong data-start="462.283">Caption (7m 42s)</strong>
+baby. Oh my goodness, what&#x27;s Brad doing? Brad! Straighten up.
+
+<strong data-start="473.890">Caption (7m 53s)</strong>
+Straighten up. No, the other way. Stop, Brad! Aye, we&#x27;re
+
+<strong data-start="488.472">Caption (8m 8s)</strong>
+peachy.
+
+<strong data-start="489.052">Caption (8m 9s)</strong>
+Sorry, Kate. No, don&#x27;t worry about us. We were on
+
+<strong data-start="491.493">Caption (8m 11s)</strong>
+the green. Is everyone okay? Any fatal injuries? Can&#x27;t you
+
+<strong data-start="495.316">Caption (8m 15s)</strong>
+say the same about Helen&#x27;s gate, mind? Oh, dear. Oh,
+
+<strong data-start="499.411">Caption (8m 19s)</strong>
+no. I thought you just pushed it off its hinges.
+
+<strong data-start="504.214">Caption (8m 24s)</strong>
+And the rest. Looks like a bit of modern sculpture
+
+<strong data-start="506.736">Caption (8m 26s)</strong>
+now. There you are. Look on the bright side. What
+
+<strong data-start="509.277">Caption (8m 29s)</strong>
+bright side? You might get a grant from the Arts
+
+<strong data-start="511.398">Caption (8m 31s)</strong>
+Council. Will Bert have your lunch waiting for you? Chance
+
+<strong data-start="518.402">Caption (8m 38s)</strong>
+would be a fine thing. He thinks you need a
+
+<strong data-start="520.544">Caption (8m 40s)</strong>
+licence to work a can opener. I&#x27;ll probably just make
+
+<strong data-start="523.851">Caption (8m 43s)</strong>
+us a quick sandwich. OK, well, enjoy it anyway, Tracey.
+
+<strong data-start="526.953">Caption (8m 46s)</strong>
+Thanks. I&#x27;m off to the office now, so when you
+
+<strong data-start="528.854">Caption (8m 48s)</strong>
+get back, could you make a start on the yoghurt?
+
+<strong data-start="530.495">Caption (8m 50s)</strong>
+Will do. Oh, he&#x27;s got a visitor. What? Oh, Brad,
+
+<strong data-start="534.977">Caption (8m 54s)</strong>
+what&#x27;s up? It&#x27;s not Grandad, is it? No, no, Grandad&#x27;s
+
+<strong data-start="538.239">Caption (8m 58s)</strong>
+fine. I just need a word with Helen. Me? Yeah.
+
+<strong data-start="544.063">Caption (9m 4s)</strong>
+What it is, I was out with Jazza this morning
+
+<strong data-start="546.904">Caption (9m 6s)</strong>
+and I was reversing. Sorry, he&#x27;s given me driving lessons,
+
+<strong data-start="550.026">Caption (9m 10s)</strong>
+you see. Go on. And we were parking back at
+
+<strong data-start="553.371">Caption (9m 13s)</strong>
+home, and I sort of overshot. And I&#x27;m ever so
+
+<strong data-start="558.434">Caption (9m 18s)</strong>
+sorry, but I ran over your front gate. Ran it
+
+<strong data-start="560.735">Caption (9m 20s)</strong>
+over? Yeah. It&#x27;s really bent. It&#x27;ll have to be replaced.
+
+<strong data-start="564.398">Caption (9m 24s)</strong>
+But you&#x27;re okay, are you? No people hurt? No. Just
+
+<strong data-start="566.279">Caption (9m 26s)</strong>
+the gate. Well, that doesn&#x27;t sound like the worst thing
+
+<strong data-start="571.128">Caption (9m 31s)</strong>
+in the world.
+
+<strong data-start="571.608">Caption (9m 31s)</strong>
+We all had the odd scrape when we were learning
+
+<strong data-start="573.669">Caption (9m 33s)</strong>
+to drive. That&#x27;s very understanding of you. As long as
+
+<strong data-start="576.851">Caption (9m 36s)</strong>
+you pay for the replacement, Brad. What? Yeah, of course.
+
+<strong data-start="580.293">Caption (9m 40s)</strong>
+That&#x27;s what I was planning. Then... We&#x27;ll say no more
+
+<strong data-start="582.380">Caption (9m 42s)</strong>
+about it. I&#x27;m really sorry about the noise. The rut.
+
+<strong data-start="588.644">Caption (9m 48s)</strong>
+We&#x27;re used to it. The deer arrived in Ambridge not
+
+<strong data-start="591.866">Caption (9m 51s)</strong>
+long after we did. I know it&#x27;s natural and, you
+
+<strong data-start="594.568">Caption (9m 54s)</strong>
+know, primeval, but it really unsettles me, all that testosterone
+
+<strong data-start="598.481">Caption (9m 58s)</strong>
+on display. It&#x27;s not for long, and we love seeing
+
+<strong data-start="601.342">Caption (10m 1s)</strong>
+the Heinz for the rest of the year. They always
+
+<strong data-start="603.384">Caption (10m 3s)</strong>
+look so peaceful. There&#x27;s a lesson there for humanity somehow.
+
+<strong data-start="607.026">Caption (10m 7s)</strong>
+You&#x27;re probably right. Robert, I must apologise about earlier.
+
+<strong data-start="612.169">Caption (10m 12s)</strong>
+What? Isn&#x27;t that why you&#x27;re here? No. Oh. No, seeing
+
+<strong data-start="617.292">Caption (10m 17s)</strong>
+you gave me an idea, Kate. I&#x27;ve been wondering what
+
+<strong data-start="619.774">Caption (10m 19s)</strong>
+to get Linda for our wedding anniversary. Do you still
+
+<strong data-start="622.836">Caption (10m 22s)</strong>
+do vouchers? We certainly do. Because I was wondering if
+
+<strong data-start="626.238">Caption (10m 26s)</strong>
+I could get one so she can have a massage
+
+<strong data-start="628.439">Caption (10m 28s)</strong>
+or something. She&#x27;s under a lot of strain at the
+
+<strong data-start="630.760">Caption (10m 30s)</strong>
+moment. I&#x27;m sure it would help reduce her stress a
+
+<strong data-start="633.002">Caption (10m 33s)</strong>
+bit. Excellent idea. And as it&#x27;s for an anniversary, we
+
+<strong data-start="637.424">Caption (10m 37s)</strong>
+also do his and hers massages. You might like to
+
+<strong data-start="639.626">Caption (10m 39s)</strong>
+consider that. Oh. Celebrate togetherness with a shared experience. How
+
+<strong data-start="646.293">Caption (10m 46s)</strong>
+much are we talking about? Well, I&#x27;ll get the price
+
+<strong data-start="648.814">Caption (10m 48s)</strong>
+list for you later and then you can see the
+
+<strong data-start="650.335">Caption (10m 50s)</strong>
+whole range of what&#x27;s available. All right.
+
+<strong data-start="653.097">Caption (10m 53s)</strong>
+No pressure. Fine, fine. I&#x27;m so pleased you didn&#x27;t take
+
+<strong data-start="656.899">Caption (10m 56s)</strong>
+offence. At what? On the green. I didn&#x27;t mean it
+
+<strong data-start="660.001">Caption (11m 0s)</strong>
+to sound like I was telling you off. I didn&#x27;t.
+
+<strong data-start="662.682">Caption (11m 2s)</strong>
+It was Kirsty I was trying to make the point
+
+<strong data-start="664.844">Caption (11m 4s)</strong>
+to. Oh, really? Think nothing of it. I know, I&#x27;m
+
+<strong data-start="668.246">Caption (11m 8s)</strong>
+being a bit of a dog with a bone about
+
+<strong data-start="669.967">Caption (11m 9s)</strong>
+this project. That&#x27;s no pun intended. I&#x27;m sorry? Perhaps you
+
+<strong data-start="676.453">Caption (11m 16s)</strong>
+didn&#x27;t hear exactly what we were talking about. We&#x27;re trying
+
+<strong data-start="679.095">Caption (11m 19s)</strong>
+to find some land where we could set up one
+
+<strong data-start="681.296">Caption (11m 21s)</strong>
+of those dedicated dog-walking fields. Oh, that&#x27;s a great idea.
+
+<strong data-start="684.838">Caption (11m 24s)</strong>
+Yes, thank you. It&#x27;s not something for rewilding. Kirsty very
+
+<strong data-start="688.900">Caption (11m 28s)</strong>
+quickly put me right on that. No, but I could
+
+<strong data-start="691.602">Caption (11m 31s)</strong>
+think of a few other places that might work.
+
+<strong data-start="693.943">Caption (11m 33s)</strong>
+Could you? Can you leave it with me for a
+
+<strong data-start="695.764">Caption (11m 35s)</strong>
+little while? Of course. I&#x27;ll do a bit of digging
+
+<strong data-start="698.486">Caption (11m 38s)</strong>
+and get back to you. That&#x27;s pretty much like Helen&#x27;s,
+
+<strong data-start="703.071">Caption (11m 43s)</strong>
+innit? Looks identical, pal. 95 quid? For a gate? It&#x27;s
+
+<strong data-start="708.634">Caption (11m 48s)</strong>
+a pretty fancy gate. I can see that. And who
+
+<strong data-start="711.616">Caption (11m 51s)</strong>
+knows what it&#x27;s going to cost to fit? It is
+
+<strong data-start="714.057">Caption (11m 54s)</strong>
+what it is, Trace. She could have been a bit
+
+<strong data-start="716.039">Caption (11m 56s)</strong>
+more understanding. Who? Helen? Yeah. I thought she was very
+
+<strong data-start="719.180">Caption (11m 59s)</strong>
+nice about it. Maybe. But it&#x27;s not like she couldn&#x27;t
+
+<strong data-start="722.202">Caption (12m 2s)</strong>
+afford to get it fixed herself. The dairy&#x27;s going gangbusters.
+
+<strong data-start="725.384">Caption (12m 5s)</strong>
+No. And she knows Brad&#x27;s a struggling student with a
+
+<strong data-start="728.326">Caption (12m 8s)</strong>
+part-time job. Probably thought the insurance would cover it. What,
+
+<strong data-start="732.082">Caption (12m 12s)</strong>
+with the 700 quid excess?
+
+<strong data-start="733.763">Caption (12m 13s)</strong>
+Bonkers. The car&#x27;s not worth much more than that. Anyway,
+
+<strong data-start="737.024">Caption (12m 17s)</strong>
+none of that matters. It were my fault and I&#x27;m
+
+<strong data-start="739.606">Caption (12m 19s)</strong>
+going to pay for it. You just buy the gate,
+
+<strong data-start="741.927">Caption (12m 21s)</strong>
+big man. I&#x27;ll do the fitting. Oh, will you? I&#x27;m
+
+<strong data-start="745.329">Caption (12m 25s)</strong>
+better ready, Mix, to patch the post. There&#x27;s bound to
+
+<strong data-start="747.851">Caption (12m 27s)</strong>
+be something in the shed I can replace the hinge
+
+<strong data-start="749.672">Caption (12m 29s)</strong>
+with. Thanks, Jazza. OK, well, that&#x27;ll keep the cost down
+
+<strong data-start="753.754">Caption (12m 33s)</strong>
+at least. But, Brad, this sort of thing can really
+
+<strong data-start="757.997">Caption (12m 37s)</strong>
+rock your confidence. Do you reckon it&#x27;d be a good
+
+<strong data-start="760.541">Caption (12m 40s)</strong>
+idea to leave the lessons for a bit? Aye, pal.
+
+<strong data-start="763.963">Caption (12m 43s)</strong>
+Everybody&#x27;d understand and there&#x27;d be no shame, innit? No. If
+
+<strong data-start="767.925">Caption (12m 47s)</strong>
+anything, it&#x27;s made me even more determined. Has it? I
+
+<strong data-start="770.767">Caption (12m 50s)</strong>
+want to work even harder at the lessons. Get it
+
+<strong data-start="773.008">Caption (12m 53s)</strong>
+right.
+
+<strong data-start="774.029">Caption (12m 54s)</strong>
+Especially my reverse parking. Okay. Well, if you&#x27;re sure. I
+
+<strong data-start="779.612">Caption (12m 59s)</strong>
+am. Fair play to you then. Yeah. Well done, son.</div>
+</article><footer>Static archive for The Archers transcripts.</footer></main><script>
+(() => {
+  const audio = document.getElementById('episode-audio');
+  const transcript = document.querySelector('.transcript');
+  const follow = document.getElementById('follow-audio');
+  const groups = [];
+  let group;
+  // Keep equal timestamps together: the source provides no finer timing.
+  for (const node of [...transcript.childNodes]) {
+    if (node.nodeType === Node.ELEMENT_NODE && node.matches('strong')) {
+      const match = node.textContent.match(/\((?:(\d+)m\s*)?(\d+)s\)/);
+      if (!match) continue;
+      const start = Number(node.dataset.start);
+      if (!group || group.start !== start) {
+        const element = document.createElement('div');
+        element.className = 'passage';
+        element.dataset.start = start;
+        transcript.insertBefore(element, node);
+        group = {start, element};
+        groups.push(group);
+      }
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'timestamp';
+      button.textContent = node.textContent;
+      button.setAttribute('aria-label', `Play from ${Math.floor(start / 60)} minutes ${start % 60} seconds, ${node.textContent}`);
+      button.addEventListener('click', () => {
+        audio.currentTime = start;
+        paint();
+        audio.play().catch(() => {});
+      });
+      group.element.append(button);
+      node.remove();
+    } else if (group) {
+      group.element.append(node);
+    }
+  }
+  let active = null;
+  let frame = null;
+  const player = document.getElementById('player');
+  const dock = document.getElementById('player-dock');
+  const miniToggle = document.getElementById('mini-toggle');
+  // Keep clear of the fixed bar, using its full (non-collapsed) height.
+  const main = document.querySelector('main');
+  const barHeight = dock.getBoundingClientRect().height;
+  main.style.paddingBottom = (barHeight + 40) + 'px';
+  function setMini(on) {
+    document.body.classList.toggle('mini-player', on);
+  }
+  miniToggle.addEventListener('click', () => { audio.pause(); });
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuPanel = document.getElementById('menu-panel');
+  function setMenu(open) {
+    menuPanel.hidden = !open;
+    menuToggle.setAttribute('aria-expanded', String(open));
+  }
+  menuToggle.addEventListener('click', event => {
+    event.stopPropagation();
+    setMenu(menuPanel.hidden);
+  });
+  menuPanel.addEventListener('click', event => event.stopPropagation());
+  document.addEventListener('click', () => setMenu(false));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menuPanel.hidden) { setMenu(false); menuToggle.focus(); }
+  });
+  function scrollToActive() {
+    if (!follow.checked || !active) return;
+    const rect = active.element.getBoundingClientRect();
+    const clearance = document.body.classList.contains('mini-player') ? 96 : barHeight + 24;
+    if (rect.top < 12 || rect.bottom > window.innerHeight - clearance) {
+      active.element.scrollIntoView({block: 'start', behavior: 'instant'});
+    }
+  }
+  function paint() {
+    const time = audio.currentTime;
+    const next = audio.ended ? null : groups.find((item, index) =>
+      time >= item.start && (index === groups.length - 1 || time < groups[index + 1].start));
+    if (next === active) return;
+    if (active) {
+      active.element.classList.remove('is-speaking');
+      active.element.removeAttribute('aria-current');
+    }
+    active = next || null;
+    if (active) {
+      active.element.classList.add('is-speaking');
+      active.element.setAttribute('aria-current', 'true');
+      if (!audio.paused) scrollToActive();
+    }
+  }
+  function tick() {
+    paint();
+    frame = audio.paused || audio.ended ? null : requestAnimationFrame(tick);
+  }
+  audio.addEventListener('play', () => {
+    if (frame !== null) cancelAnimationFrame(frame);
+    setMini(true);
+    tick();
+    scrollToActive();
+  });
+  audio.addEventListener('pause', () => {
+    if (frame !== null) cancelAnimationFrame(frame);
+    frame = null;
+    setMini(false);
+    paint();
+  });
+  for (const event of ['timeupdate', 'seeking', 'seeked', 'ended']) audio.addEventListener(event, paint);
+  audio.addEventListener('ended', () => setMini(false));
+  audio.addEventListener('error', () => { setMini(false); document.getElementById('audio-error').hidden = false; });
+  follow.addEventListener('change', scrollToActive);
+})();
+</script>
+</body></html>
