@@ -724,8 +724,10 @@ am. Fair play to you then. Yeah. Well done, son.</div>
   for (const node of [...transcript.childNodes]) {
     if (node.nodeType === Node.ELEMENT_NODE && node.matches('strong')) {
       const match = node.textContent.match(/\((?:(\d+)m\s*)?(\d+)s\)/);
-      if (!match) continue;
-      const start = Number(node.dataset.start);
+      const start = node.dataset.start !== undefined
+        ? Number(node.dataset.start)
+        : match ? Number(match[1] || 0) * 60 + Number(match[2]) : NaN;
+      if (!Number.isFinite(start)) continue;
       if (!group || group.start !== start) {
         const element = document.createElement('div');
         element.className = 'passage';
