@@ -255,9 +255,10 @@ def main():
         relative_audio = os.path.relpath(published_audio, output.parent).replace(os.sep, "/")
         audio_url = html.escape(quote(relative_audio, safe="/"), quote=True)
         transcript_html = "\n\n".join(
-            f'<strong data-start="{seconds:.3f}">{html.escape(speaker)} '
-            f'({int(seconds) // 60}m {int(seconds) % 60}s)</strong>\n'
-            f"{html.escape(body)}"
+            f'<strong data-start="{seconds:.3f}">'
+            + (f'({int(seconds) // 60}m {int(seconds) % 60})' if speaker == "Caption"
+               else f'{html.escape(speaker)} ({int(seconds) // 60}m {int(seconds) % 60}s)')
+            + f'</strong>\n{html.escape(body)}'
             for speaker, seconds, body in entries
         )
         browser_title = f"The Archers — {day} Transcript" if not args.title else f"The Archers — {title} Transcript"
